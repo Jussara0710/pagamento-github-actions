@@ -25,13 +25,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Instalar dependências
         run: npm install
 
       - name: Rodar testes
-        run: npm test
+        run: npx mocha test/**/*.test.js
 
   deploy:
     name: Deploy
@@ -45,5 +44,5 @@ jobs:
       - name: Exibir ambiente selecionado
         run: echo "Fazendo deploy no ambiente ${{ github.event.inputs.ambiente }}"
 
-      - name: Deploy (substitua pelo seu comando real)
+      - name: Deploy
         run: echo "Deploy concluído com sucesso!"
