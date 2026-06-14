@@ -1,0 +1,12 @@
+{
+  "name": "servico-de-pagamento",
+  "version": "1.0.0",
+  "description": "Serviço de pagamento com Page Objects e testes Mocha",
+  "main": "src/ServicoDePagamento.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
